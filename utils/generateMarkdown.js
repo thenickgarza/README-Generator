@@ -70,12 +70,26 @@ const renderTests = testText => {
   };
 };
 
+const renderTableOf = tableText => {
+  if (tableText === true) {
+    return `## Table Of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)`
+  } else {
+    return '';
+  };
+};
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
   return `
   ## ${data.name}
   
   ## Description ${renderDescription(data.description)}
+
+  ${renderTableOf(data.confirmTableOfContents)}
   
   ## Installation ${renderInstallation(data.installation)}
   
