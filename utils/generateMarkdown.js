@@ -15,7 +15,6 @@ const renderDescription = descriptionText => {
     return '';
   } else {
     return `
-    ## Description
     
     ${descriptionText}`;
  };
@@ -26,7 +25,6 @@ const renderInstallation = installText => {
     return '';
   } else {
     return `
-    ## Installation
     
     ${installText}`;
   };
@@ -37,7 +35,6 @@ const renderUsage = usageText => {
     return '';
   } else {
     return `
-    ## Usage
     
     ${usageText}`;
   };
@@ -48,7 +45,6 @@ const renderCredits = creditText => {
     return '';
   } else {
     return `
-    ## Credits
     
     ${creditText}`;
   };
@@ -59,7 +55,6 @@ const renderContributing = contText => {
     return '';
   } else {
     return `
-    ## Contributing
     
     ${contText}`;
   };
@@ -70,7 +65,6 @@ const renderTests = testText => {
     return '';
   } else {
     return `
-    ## Tests
     
     ${testText}`;
   };
@@ -80,15 +74,18 @@ const renderTests = testText => {
 const generateMarkdown = data => {
   return `
   ## ${data.name}
-
-  ${renderDescription(data.description)}
-  ${renderInstallation(data.installation)}
-  ${renderUsage(data.usage)}
-  ${renderCredits(data.credits)}
-  ${renderContributing(data.contributing)}
-  ${renderTests(data.tests)}
-
-
+  
+  ## Description ${renderDescription(data.description)}
+  
+  ## Installation ${renderInstallation(data.installation)}
+  
+  ## Usage ${renderUsage(data.usage)}
+  
+  ## Credits ${renderCredits(data.credits)}
+  
+  ## Contributing ${renderContributing(data.contributing)}
+  
+  ## Tests ${renderTests(data.tests)}
 `;
 }
 
