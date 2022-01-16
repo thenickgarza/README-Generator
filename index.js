@@ -95,12 +95,47 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'contributing',
-            message: "Plese provide some guidelines for other devleopers to contribute to the project"
+            message: "Plese provide some guidelines for other devleopers to contribute to the project",
+            
         },
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide examples on how to run tests you created for the application'
+            message: 'Provide examples on how to run tests you created for the application',
+            validate: testInput => {
+                if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the tests for your project');
+                    return false
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'Please enter your github username',
+            validate: usernameInput => {
+                if (usernameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your github username!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "Please enter your email address",
+            validate: emailInput => {
+                if (emailInput) {
+                    return true
+                } else {
+                    console.log('Please enter your email address');
+                    return false;
+                }
+            }
         }
     ]);
 };

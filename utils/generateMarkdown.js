@@ -86,6 +86,12 @@ const generateMarkdown = data => {
   ## Contributing ${renderContributing(data.contributing)}
   
   ## Tests ${renderTests(data.tests)}
+
+  ## Questions 
+
+  Contact Me: Nicholas Garza
+  Email: ${data.email}
+  Github: www.githuib.com/${data.username}
 `;
 }
 
