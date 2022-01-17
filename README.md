@@ -37,6 +37,6 @@
 
   ## Questions 
 
-  Contact Me: Nicholas Garza
-  Email: thenickgarza14@gmail.com
+  Contact Me: Nicholas Garza |
+  Email: thenickgarza14@gmail.com |
   Github: www.github.com/thenickgarza14
